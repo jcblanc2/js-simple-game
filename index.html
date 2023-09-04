@@ -7,12 +7,26 @@
     <title>Rock Paper Scissors</title>
   </head>
   <body>
-    <h3>Rock Paper Scissors</h3>
-    <button class="rock-btn" onclick="playGame('rock')">Rock</button>
-    <button class="paper-btn" onclick="playGame('paper')">Paper</button>
-    <button class="scissors-btn" onclick="playGame('scissors')">
-      Scissors
+    <p class="title">Rock Paper Scissors</p>
+
+    <button class="move-btn" onclick="playGame('rock')">
+      <img src="images/rock-emoji.png" alt="rock-emoji" class="move-icon" />
     </button>
+    <button class="move-btn" onclick="playGame('paper')">
+      <img src="images/paper-emoji.png" alt="paper-emoji" class="move-icon" />
+    </button>
+    <button class="move-btn" onclick="playGame('scissors')">
+      <img
+        src="images/scissors-emoji.png"
+        alt="scissors-emoji"
+        class="move-icon"
+      />
+    </button>
+
+    <p class="p-result"></p>
+    <p class="p-moves"></p>
+    <p class="p-score"></p>
+
     <button class="reset-btn" onclick="reset()">Reset Score</button>
   </body>
   <script src="app.js"></script>

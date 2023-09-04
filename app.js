@@ -4,6 +4,13 @@ let score = JSON.parse(localStorage.getItem("score")) || {
     ties: 0
 };
 
+displayScore();
+
+// display the score
+function displayScore(){
+  document.querySelector(".p-score")
+  .innerHTML = `Wins: ${score.wins}  -  Loses: ${score.loses}  -  Ties: ${score.ties}`;
+}
 
 // generate number between [min, max]
 function getRandom(min, max) {
@@ -18,6 +25,7 @@ function reset() {
     score.loses = 0;
     score.ties = 0;
     localStorage.removeItem("score");
+    displayScore();
 }
 
 // save the score in local storage
@@ -78,9 +86,16 @@ function playGame(playeMove){
     // save the score in local storage
     const jsonString = JSON.stringify(score);
     saveScore(jsonString);
-    
-    // display message
-    alert(`You picked ${playeMove} and Computer picked ${computerChoice}.
-    \n${result}
-    \nWins: ${score.wins}  -  Loses: ${score.loses}  -  Ties: ${score.ties}`)
+
+    // display message, result and score
+    document.querySelector(".p-result")
+    .innerHTML = result;
+
+    document.querySelector(".p-moves")
+    .innerHTML = `You
+    <img src="images/${playeMove}-emoji.png" class="move-icon" />
+    <img src="images/${computerChoice}-emoji.png" class="move-icon" />
+    Computer`;
+   
+    displayScore();
 }
