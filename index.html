@@ -7,27 +7,29 @@
     <title>Rock Paper Scissors</title>
   </head>
   <body>
-    <p class="title">Rock Paper Scissors</p>
+    <div class="container">
+      <p class="title">Rock Paper Scissors</p>
 
-    <button class="move-btn" onclick="playGame('rock')">
-      <img src="images/rock-emoji.png" alt="rock-emoji" class="move-icon" />
-    </button>
-    <button class="move-btn" onclick="playGame('paper')">
-      <img src="images/paper-emoji.png" alt="paper-emoji" class="move-icon" />
-    </button>
-    <button class="move-btn" onclick="playGame('scissors')">
-      <img
-        src="images/scissors-emoji.png"
-        alt="scissors-emoji"
-        class="move-icon"
-      />
-    </button>
+      <button class="move-btn" onclick="playGame('rock')">
+        <img src="images/rock-emoji.png" alt="rock-emoji" class="move-icon" />
+      </button>
+      <button class="move-btn" onclick="playGame('paper')">
+        <img src="images/paper-emoji.png" alt="paper-emoji" class="move-icon" />
+      </button>
+      <button class="move-btn" onclick="playGame('scissors')">
+        <img
+          src="images/scissors-emoji.png"
+          alt="scissors-emoji"
+          class="move-icon"
+        />
+      </button>
 
-    <p class="p-result"></p>
-    <p class="p-moves"></p>
-    <p class="p-score"></p>
+      <p class="p-result"></p>
+      <p class="p-moves"></p>
+      <p class="p-score"></p>
 
-    <button class="reset-btn" onclick="reset()">Reset Score</button>
+      <button class="reset-btn" onclick="reset()">Reset Score</button>
+    </div>
   </body>
   <script src="app.js"></script>
 </html>

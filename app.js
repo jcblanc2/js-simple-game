@@ -43,41 +43,41 @@ function playGame(playeMove){
     switch (playeMove) {
         case "rock":
           if (computerChoice === "scissors") {
-            result = "You win.";
+            result = "You win";
           } else if (computerChoice === "paper") {
-            result = "You lose.";
+            result = "You lose";
           } else {
-            result = "Tie.";
+            result = "Tie";
           }
           break;
       
         case "paper":
           if (computerChoice === "rock") {
-            result = "You win.";
+            result = "You win";
           } else if (computerChoice === "scissors") {
-            result = "You lose.";
+            result = "You lose";
           } else {
-            result = "Tie.";
+            result = "Tie";
           }
           break;
       
         case "scissors":
           if (computerChoice === "paper") {
-            result = "You win.";
+            result = "You win";
           } else if (computerChoice === "rock") {
-            result = "You lose.";
+            result = "You lose";
           } else {
-            result = "Tie.";
+            result = "Tie";
           }
           break;
       
         default:
-          result = "Invalid player move.";
+          result = "Invalid player move";
     }
 
-    if (result === "Tie.") {
+    if (result === "Tie") {
         score.ties++;
-    } else if (result === "You lose.") {
+    } else if (result === "You lose") {
         score.loses++;
     } else {
         score.wins++;
